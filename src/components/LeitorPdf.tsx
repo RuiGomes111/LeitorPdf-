@@ -45,7 +45,7 @@ export default function LeitorPDFUsuario() {
             file={file}
             onLoadSuccess={({ numPages }) => setNumPages(numPages)}
           >
-            {Array.from(new Array(numPages), (el, index) => (
+            {Array.from(new Array(numPages), (_, index) => (
               <Page
                 key={`page_${index + 1}`}
                 pageNumber={index + 1}
